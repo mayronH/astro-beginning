@@ -1,0 +1,31 @@
+@import url('https://api.fonts.coollabs.io/css2?family=Quicksand:wght@100;200;300;400;500;600;700;800&display=swap');
+
+/* Resets */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Quicksand';
+
+  color: #fff;
+  background-color: #222;
+}

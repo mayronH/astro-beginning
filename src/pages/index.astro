@@ -1,0 +1,25 @@
+---
+// this is server side javascript, is a Astro funcionality
+import MainLayout from '../layouts/MainLayout.astro'
+
+import TheMessage from '../components/TheMessage.vue'
+import TheCounter from '../components/TheCounter.vue'
+---
+
+<!-- Astro Component --><!-- Passing props to the component -->
+<MainLayout title="Home">
+  <p id="paragraph">Hello World</p>
+  <!-- Using a Vue Component -->
+  <TheMessage message="This is a Vue Component" />
+  <!-- Using reactivity with a Vue Component -->
+	<!-- We need to tell Astro to load the js for the vue component -->
+	<!-- If we inspect the element, a simple component is just plain HTML but a component with client:load or others, creates a astro-island -->
+  <TheCounter client:load />
+</MainLayout>
+
+<!-- inline script -->
+<!-- this script tag is client side -->
+<script type="ts">
+  const p = document.querySelector('#paragraph')
+  console.log(p)
+</script>
